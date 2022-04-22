@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동서식품</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favi.ico">
+
+  <!-- 초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <!-- 공통서식 -->
+  <link href="./css/base.css" rel="stylesheet" type="text/css">
+  <!-- 레이아웃 서식 -->
+  <link href="./css/pc.css" rel="stylesheet" type="text/css">
+  <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+  <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+  <!-- 메인페이지 서식 -->
+  <link href="./css/main.css" rel="stylesheet" type="text/css">
+  <!-- 플렉스 슬라이드 서식 -->
+  <link href="./css/flexslider.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- 플렉스 슬라이드 제이쿼리 소스 -->
+  <script src="./script/jquery.flexslider.js"></script>
+  <!-- 벤더프리픽스 - css3속성사용시 접두사 자동으로 붙여주는 스크립트 소스 -->
+  <script src="./script/prefixfree.min.js"></script>
+  <!-- 아이콘 폰트 주소 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <script>
+    $(document).ready(function(){
+
+      $('.t_btn').hide();
+
+      $(window).scroll(function(){
+        let sPos = $(this).scrollTop();
+        console.log(sPos);
+        if(sPos>=143){
+          $('.t_btn').show();
+        }else{
+          $('.t_btn').hide();
+        }
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+  <!-- 체크박스 -->
+  <input type="checkbox" id="toggle">
+
+  <!-- 상단 헤더영역 -->
+  <header>
+    <div class="header_inner">
+      <h1>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/logo.png" alt="상단로고">
+        </a>
+      </h1>
+
+      <!-- lnb : local navigation bar -->
+      <nav class="lnb">
+        <ul>
+          <li><a href="join.html" title="회원가입">회원가입</a></li>
+          <li><a href="login.thml" title="로그인">로그인</a></li>
+
+          <li>
+            <input type="text" id="search">
+            <label for="search">
+              <i class="fas fa-search"></i>
+            </label>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 전체메뉴 버튼(토글) -태블릿, 모바일용 피시버전에서는 숨길 것  -->
+      <label for="toggle" class="total_btn">
+        <i class="fas fa-bars"></i>
+      </label>
+
+      <i class="fas fa-search m_search"></i>
+    </div>
+
+      <!-- 메인메뉴: gnb -->
+      <nav class="gnb">
+        <h3>menu</h3>
+        <label for="toggle"><i class="fas fa-times"></i></label>
+        <ul>
+          <li><a href="brands.html" title="회사소개">회사소개<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="a.html" title="동서식품">동서식품</a></li>
+              <li><a href="a.html" title="식품안전센터">식품안전센터</a></li>
+            </ul>
+          </li>
+          <li><a href="menu.html" title="제품안내">제품안내<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="b.html" title="브랜드">브랜드</a></li>
+              <li><a href="b.html" title="제품소개">제품소개</a></li>
+            </ul>
+          </li>
+          <li><a href="promotion.html" title="홍보센터">홍보센터<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="c.html" title="뉴스">뉴스</a></li>
+              <li><a href="c.html" title="이벤트">이벤트</a></li>
+              <li><a href="c.html" title="홍보영상">홍보영상</a></li>
+              <li><a href="c.html" title="영상레시피">영상레시피</a></li>
+              <li><a href="c.html" title="TV CF">TV CF</a></li>
+              <li><a href="c.html" title="커피클래스">커피클래스</a></li>
+            </ul>
+          </li>
+          <li><a href="community.html" title="사회공헌">사회공헌<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="d.html" title="동서문학상">동서문학상</a></li>
+              <li><a href="d.html" title="꿈의도서관">꿈의도서관</a></li>
+            </ul>
+          </li>
+          <li><a href="fran.html" title="고객의소리">고객의소리<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li><a href="E.html" title="FAQ">FAQ</a></li>
+              <li><a href="e.html" title="제품문의">제품문의</a></li>
+              <li><a href="e.html" title="기타문의">기타문의</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+  </header>
+
+  <!-- 메인콘텐츠영역 -->
+  <main>
+    <section class="slide">
+      <h2>메인슬라이드</h2>
+      <div class="flexslider pc_slide">
+        <ul class="slides">
+          <li>
+            <a href="a.html" title="슬라이드01">
+              <img src="./images/bg_slide_1.png" alt="슬라이드01">
+            </a>
+          </li>
+          <li>
+            <a href="b.html" title="슬라이드02">
+              <img src="./images/bg_slide_2.png" alt="슬라이드02">
+            </a>
+          </li>
+          <li>
+            <a href="c.html" title="슬라이드03">
+              <img src="./images/bg_slide_3.png" alt="슬라이드03">
+            </a>
+          </li>
+          <li>
+            <a href="d.html" title="슬라이드04">
+              <img src="./images/bg_slide_4.png" alt="슬라이드04">
+            </a>
+          </li>
+          <li>
+            <a href="e.html" title="슬라이드05">
+              <img src="./images/bg_slide_5.png" alt="슬라이드05">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 모바일에서만 나타나는 슬라이드 -->
+      <div class="flexslider m_slide">
+        <ul class="slides">
+          <li>
+            <a href="a.html" title="슬라이드01">
+              <img src="./images/cf_thumb_1519.jpg" alt="슬라이드01">
+            </a>
+          </li>
+          <li>
+            <a href="b.html" title="슬라이드02">
+              <img src="./images/img_banner1_2.jpg" alt="슬라이드02">
+            </a>
+          </li>
+          <li>
+            <a href="c.html" title="슬라이드03">
+              <img src="./images/img_banner1_3.jpg" alt="슬라이드03">
+            </a>
+          </li>
+          <li>
+            <a href="d.html" title="슬라이드04">
+              <img src="./images/img_banner1_6.jpg" alt="슬라이드04">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="cont">
+      <h3>콘텐츠2영역</h3>
+      
+      <article class="n_item">
+        <div class="item_wrap">
+          <h3>신제품</h3>
+          <p>신제품을 지금 확인하세요!</p>
+          <div id="banner">
+            <img src='./images/banner00.png' alt="" id="s_img">
+            <i class="fas fa-angle-left" id="l_btn"></i>
+            <i class="fas fa-angle-right" id="r_btn"></i>
+            <ul id="page" class="c_btn">
+              <li data-index="" onclick="changeBanner(0);" id='p0'>&nbsp;</li>
+              <li data-index="" onclick="changeBanner(1);" id='p1'>&nbsp;</li>
+              <li data-index="" onclick="changeBanner(2);" id='p2'>&nbsp;</li>
+              <li data-index="" onclick="changeBanner(3);" id='p3'>&nbsp;</li>
+              <li data-index="" onclick="changeBanner(4);" id='p4'>&nbsp;</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    
+
+      <article class="c_b_story">
+        <h3>카누스토리</h3>
+        <span>세상의 모든<br>순간이 더욱<br>행복해지도록</span>
+        <a href="#" title="브랜드스토리" class="brand">
+          <img src="./images/img_banner1_1.jpg" alt="카누스토리">
+        </a>
+      </article>
+      
+      <article class="ad">
+        <h3>웹매거진</h3>
+          
+          <span>동서식품 재료를 활용하여<br>너티 캬라멜 초콜렛을 만들어보세요!</span>
+          <p><a href="#" title="상세보기" class="button">레시피 보기</a></p>
+          <img src="./images/ad03.jpg" alt="01">
+      </article>
+
+      <article class="notice">
+        <h3>HOT NEWS<i class="fas fa-plus"></i></h3>
+        <ul>
+          <li><a href="#" title="내용">동서식품, 신제품 '맥심 카누 라이트 로스트 아메리카노' 출시</a></li>
+          <li><a href="#" title="내용">소비자가 직접 맛의 비밀을 푸는 '미스터리 오레오'한정판 출시</a></li>
+          <li><a href="#" title="내용">'맥심 카누 트리플샷 라떼, 너티 카라멜 라떼' 2종 출시'</a></li>
+          <li><a href="#" title="내용">동서식품, '제23회 맥심커피배 입신최강전' 개최</a></li>
+        </ul>
+      </article>
+
+      <article class="store">
+        <h3>오픈스토어</h3>
+        <span>도심 속 정원, 숲속 커피 공장<br>MAXIM PLANET</span>
+        <a href="#" title="">
+          <img src="./images/img_maxim_flant_banner.jpg" alt="스토어">
+        </a>
+        
+      </article>
+
+      <article class="news">
+        <h3>NOTICE<i class="fas fa-plus"></i></h3>
+        <ul>
+          <li><a href="1.html" title="내용">음악 꿈나무 지원하는 '제14회 맥심 사랑의 향기' 진행</a></li>
+          <li><a href="2.html" title="내용">창원공장, '기후변화 대응 및 온실가스 감축' 산업통상자원부 장관 표창 수상</a></li>
+          <li><a href="3.html" title="내용">동서식품, 코로나 19 선별진료소 의료진 위해 맥심 티오피 지원</a></li>
+          <li><a href="4.html" title="내용">제6기 맥심 커피라이터 온라인 발대식 개최</a></li>
+        </ul>
+      </article>
+
+
+    </section>
+  </main>
+
+  <!-- 푸터영역 -->
+  <footer>
+    
+    <nav class="f_lnb">
+      <ul>
+        <li><a href="info01.html" title="">개인정보취급방침</a></li>
+        <li><a href="info02.html" title="">이용약관</a></li>
+        <li><a href="tel:080-000-0000" title="">영상정보처리기기운영방침</a></li>
+      </ul>
+    </nav>
+
+    <select onChange="siteUrl(this)" class="f_site">
+      <option value="">브랜드 사이트</option>
+      <option value="http://www.maximkanu.co.kr/pc.asp">카누</option>
+      <option value="http://www.postopia.co.kr/main/">포스트</option>
+    </select>
+
+    <a href="#" title="페이지 상단으로 바로가기" class="t_btn">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <address>
+      <p>[부평공장] 인천시 부평구 새벌로 55 [서울사무소] 서울시 마포구 독막로 324 (도화동,동서빌딩)</p>
+      <P>대표번호 1588-2233 고객상담실 080-023-9114</P>
+      <p>Copyright&copy;2017 Dongsuh Foods Coporation. All rights reserved.</p>
+    </address>
+
+
+  </footer>
+
+  <script>
+    // Can also be used with $(document).ready()
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+
+    const l_btn=document.getElementById('l_btn'); //좌 방향버튼
+    const r_btn=document.getElementById('r_btn'); //우 방향버튼
+    let n=0; //이미지 번호 변수값
+
+    //첫번째 콘트롤 버튼에 적용되는 서식
+    document.getElementById('p'+n).style.backgroundColor="rgba(0,0,0,.9)";
+    document.getElementById('p'+n).style.width='30px';
+
+    //오른쪽 방향 버튼 클릭시 해당 번호가 0, 1, 2, 3, 4, 0 순으로 나오게 하기
+    r_btn.onclick=function(){
+      if(n==4){
+        n=0;
+      }else{
+        n++;
+      }
+      console.log(n);
+      document.getElementById('s_img').src='./images/banner0'+n+'.png';
+      changeBanner(n);//함수에게 n을 넘김
+    }
+
+    //왼쪽 방향 버튼 클릭시 해당 번호가 0,4,3,2,1,0순으로 나오게 하기
+    l_btn.onclick = function(){
+      if(n==0){
+        n=4;
+      }else{
+        n--;
+      }
+      console.log(n);
+      document.getElementById('s_img').src='./images/banner0'+n+'.png';
+      changeBanner(n);//함수에게 n을 넘김
+    }
+
+    //콘트롤 버튼 클릭시 해당 li의 인덱스 값을 changebanner에 대입하여 이미지가 변경되도록
+    function changeBanner(a){
+      n=a;
+      console.log(n);
+      document.getElementById('s_img').src='./images/banner0'+n+'.png';
+    
+      for(let i=0;i<5;i++){
+        document.getElementById('p'+i).style.backgroundColor="rgba(0,0,0,.3)";
+        document.getElementById('p'+i).style.width='15px';
+      }
+        document.getElementById('p'+n).style.backgroundColor="rgba(0,0,0,.9)";
+        document.getElementById('p'+n).style.width='30px';
+      }
+
+      function auto(){
+        if(n==4){
+          n=0;
+        }else{
+          n++;
+        }
+      console.log(n);
+      document.getElementById('s_img').src='./images/banner0'+n+'.png';
+      changeBanner(n); //함수에게 n넘기기
+      }
+      
+    //4초마다 자동으로 움직이게 하기
+    let Timer = setInterval(auto,4000);
+
+    
+
+  </script>
+
+
+</body>
+</html>

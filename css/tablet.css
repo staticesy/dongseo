@@ -1,0 +1,444 @@
+@charset "utf-8";
+
+/* 최소 768이상 ~ 1024px */
+@media screen and (min-width:768px) and (max-width:1024px) {
+
+  /* 상단헤더서식 */
+
+  header{
+    width: 100%;
+    background-color: #fff;
+    
+  }
+  
+  .header_inner{
+    width: 100%;
+    height: 112px;
+    position: relative;
+  }
+
+  .total_btn{
+    display: inline;
+    position: absolute;
+    right: 42px;
+    z-index: 100;
+  }
+
+  .header_inner > h1{
+    width: 196px;
+    position: relative;
+    left: 20px;
+    z-index: 100;
+  }
+
+  .total_btn > i.fas.fa-bars{
+    position: absolute;
+    font-size: 2rem; /* 1rem = 16px, 32px*/
+    padding: 6px; /* 터치 영역 44~48px이면 좋으므로 32px에서 패딩값 줘서 44 맞춰 줌 */
+  }
+
+  /* 전체메뉴 클릭시 체크박스가 체크되면서 체크박스 바로 뒤 헤더의 자손 .gnb의 높이를 변경하여 서브가 보이게 한다 */
+  #toggle:checked + header > .gnb{
+    height: 260px;
+  }
+
+  /* lnb서식 */
+  .lnb{
+    position: absolute;
+    right: 0px; top: 15px;
+    transition: none;
+  }
+  .lnb > ul{display: flex;}
+  .lnb > ul > li{}
+  .lnb > ul > li > a{
+    text-transform: uppercase;
+    font-size: 13px;
+    border-right: 1px solid #ccc;
+    padding:0px 6px;
+    line-height: 22px;
+  }
+  .lnb > ul > li:nth-child(6) > a{
+    border: none;
+  }
+  .lnb > ul > li > a:hover{}
+
+  .lnb input[type=text]{
+    width: 150px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .lnb i.fa-search{
+    font-size: 18px;
+    transform: translate(-22px, 3px);
+  }
+
+  /* 메인메뉴 서식 */
+  .gnb{
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute; 
+    transform: translateY(-40px);
+    overflow: hidden; /*아래 서브메뉴 안보이게 */
+    transition: 0.5s;
+    z-index: 99;
+  }
+
+  .gnb:hover{
+    height: 260px;
+  }
+  .gnb > ul{
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .gnb > ul > li{
+    margin: 0px 2.5%;
+    text-align: center;
+    position: relative;
+  }
+
+  /* .gnb > ul > li:last-child{
+    padding-right: 20%;
+  }  */
+  .gnb > ul > li > a{
+    font-size: 16px;
+    padding: 0px 10px;
+    display: block;
+    line-height: 40px; /*반응하는 영역 넓히기 위해*/
+  }
+  .gnb > ul > li > a:hover{
+    text-decoration: none;
+    color: #F04A4F;
+  }
+  .gnb > ul > li > a:after{ /*a 태그 뒤쪽에 공간을 만들어서 라인서식 넣어주기 */
+    display: block; /*박스만들기*/
+    content:""; /*내용없음*/
+    height: 2px;
+    background:#F04A4F;
+    transform:translateY(-3px) scale(0);
+    transition: 0.3s;
+  }
+
+  .gnb > ul > li > a:hover:after{
+    transform: translateY(-3px) scale(1);
+  }
+
+  .sub > li{}
+  .sub > li > a{
+    line-height: 36px;
+    display: block;
+    font-size: 15px;
+  }
+  .sub > li > a:hover{
+    text-decoration: underline;
+  }
+  
+ 
+  .slide h2{display: none;}
+  .m_slide{display: none;}
+
+
+  .cont{
+    width:100%;
+    overflow: hidden;
+    display:grid;
+    box-sizing: border-box;
+    grid-gap:1.9531%;
+    padding: 15px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 450px 280px 220px;
+    grid-template-areas:
+      "n_item ad"
+      "c_b_story store"
+      "notice news"
+  }
+
+  .cont h3 {display: none;}
+ 
+  /* ------------n_item 영역------------------- */
+
+  .n_item{
+    grid-area: n_item;
+    position: relative;
+    background-color: rgb(248, 248, 248);
+  }
+
+  .item_wrap{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+  }
+
+  .n_item p{
+    color: #333;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .n_item #banner{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+  }
+
+  .n_item #banner img{
+    width: 100%;
+  }
+  
+  i.fa-angle-left{
+    position: absolute;
+    left: 0px; top: 210px;
+    font-size: 30px;
+    color: #fff;
+    background: rgba(0,0,0,.7);
+    padding: 5px; cursor: pointer;
+  }
+  i.fa-angle-right{
+    position: absolute;
+    right: 0px; top: 210px;
+    font-size: 30px;
+    color: #fff;
+    background: rgba(0,0,0,.7);
+    padding: 5px; cursor: pointer;  
+  }
+  .c_btn{
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    text-align: center;
+  }
+  .c_btn > li{
+    display: inline-block;
+    width: 15px; height: 15px;
+    border-radius: 20px;
+    transition: 0.5s;
+    background: rgba(0,0,0,.7);
+    cursor: pointer;
+  }
+
+  /* ------------ad영역----------------- */
+
+
+  .ad{
+    grid-area:ad;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ad span{
+    font-size: 25px;
+    line-height: 30px;
+    position: absolute;
+    top: 155px;
+    left: 40px;
+    color: #fff;
+    text-align: center;
+    z-index: 9999999;
+  }
+
+  .ad p{
+    position: absolute;
+    bottom: 193px;
+    left: 150px;
+    text-decoration: none;
+    text-align: center;
+    z-index: 999999;
+  }
+
+  .ad p a{
+    text-decoration:none;
+  }
+
+  .button{
+    width: 100px;
+    height: 50px;
+    font-size: 17px;
+    padding: 3px 10px;
+    border: none;
+    transition: 0.2s;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:hover{
+  color: #333;
+  background: #fff;
+}
+
+  .ad img{
+    width: 100%;
+    position: absolute;
+    top: 0px;    
+    transition: 0.5s;
+    filter: grayscale(0);
+  }
+
+  .ad img:hover{
+    filter: grayscale(0.5);
+    transform: scale(1.1);
+  }
+  
+  /* ------------cbstory 영역--------------------- */
+  .c_b_story{
+    grid-area:c_b_story;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .c_b_story img{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+  }
+
+  .c_b_story span{
+    font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+    padding-left: 10px;
+    padding-top: 30px;
+    position: absolute;
+    top: 10px;
+    z-index: 8888;
+  }
+
+  /* -----------------store 영역------------------------------ */
+  
+  .store{
+    grid-area:store;
+    height:280px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .store img{
+    height: 280px;
+    position: absolute;
+    right: 0px;
+  }
+  .store span{
+    font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+    position: absolute;
+    bottom: 60px;
+    left: 17px;
+    z-index: 666;
+  }
+
+  /* -------------news 영역-------------------- */
+  .news{
+    grid-area:news;
+    position: relative;
+    width: 100%;
+   }
+
+
+  /* -----------notice 영역----------------- */
+  .notice{
+    grid-area:notice;
+    position: relative;
+    width: 100%;
+  }
+
+  .notice > h3, .news > h3{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 23.5px;
+    border-bottom: 1px solid #333;
+    padding: 5px 0px;
+    display: block;
+  }
+
+  .notice i.fa-plus, .news i.fa-plus{
+    border: 1px solid #333;
+    padding: 2px 3px 1px 3px;
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    right: 2px; top: 5px;
+    background: rgba(0,0,0,.7);
+    cursor: pointer;
+    /* float: right;
+    transform: translateY(5px); */
+  }
+  article > ul{padding-top: 6px;}
+  article > ul > li{
+    font-size: 1rem;
+    width: 100%;
+    line-height: 200%; /*100%=16px*/
+    white-space: nowrap; /*다음 줄로 넘기지 않기*/
+    overflow: hidden; /*넘치는 콘텐츠 숨기기 */
+    text-overflow: ellipsis; /*생략기호 나오게 함*/
+    text-indent: 10px;
+  }
+  article > ul > li:first-child a{
+    font-weight: 500;
+  }
+  
+
+  article > ul > li{
+    width: 100%; 
+  }
+
+  /* 푸터영역 서식 */
+   /* 푸터영역 서식 */
+   footer{
+    clear: right; /*위 영역에서 사용된 플로트속성을 해지한다.*/
+    border-top: 1px solid #ccc;
+    width: 100%;
+    margin: 0px auto;
+    padding-top: 10px;
+    position: relative; /*기준*/
+  }
+
+  .f_lnb{padding-top: 10px;}
+  .f_lnb > ul{display: flex;}
+  .f_lnb > ul a{
+    padding: 0px 10px;
+    border-right: 1px solid #ccc;
+  }
+  .f_lnb > ul > li:last-child > a{
+    border: none;
+  }
+  select{
+    position: absolute; 
+    right: 10px; top: 10px;
+  }
+
+   address{
+    padding: 10px 10px;
+  }
+  address > p{
+    line-height:20px;
+  }
+
+  .t_btn{
+  position:fixed;
+  right:10px; bottom:20px;
+} 
+
+  i.fa-angle-up{
+    font-size: 15px;
+    color: #fff;
+    background: rgba(0,0,0,.7);
+    padding: 5px; cursor: pointer;
+  }
+  
+
+  @media screen and (min-width: 768px) and (max-width: 840px){
+    footer{padding-top: 40px;}
+    .sns{
+      width: 146px;
+      left: 50%; transform: translate(-50%, -10%);} 
+      /* 왼쪽에서 오십프로 떨어지게 오른쪽은 왼쪽 떨어진만큼 =중간에 위치*/
+  }
+
+
+}
